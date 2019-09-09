@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 //#include <windows.h>
 
-MainWindow::CreateMenu()
+void MainWindow::CreateMenu()
 {
     QAction *itemMenu;
     QMenuBar * mnu = new QMenuBar(this);
@@ -28,10 +28,10 @@ MainWindow::CreateMenu()
         mnu->addMenu(pMnu);
         mnu->addMenu(pMnu2);
         mnu->show();
-        return 0;
+        return;
 }
 
-MainWindow::CreateButton(QString name, int x, int y, int w, int h)
+void MainWindow::CreateButton(QString name, int x, int y, int w, int h)
 {
     QPushButton *but = new QPushButton(name,this);
    // but->setText(name);
@@ -42,10 +42,10 @@ MainWindow::CreateButton(QString name, int x, int y, int w, int h)
     if(name == "Dec")
     connect(but, SIGNAL (released()), this, SLOT (clickdecButton()));
 
-    return 0;
+    return;
 }
 
-MainWindow::CreateStaticText(QString name, int x, int y)
+void MainWindow::CreateStaticText(QString name, int x, int y)
 {
     QPalette palette;
       palette.setColor(QPalette::Background, Qt::white);
@@ -58,10 +58,10 @@ MainWindow::CreateStaticText(QString name, int x, int y)
     lbl->setPalette(palette);
     lbl->setAutoFillBackground(true);
     lbl->show();
-    return 0;
+    return;
 }
 
-MainWindow::CreatePic(QString filename, int x, int y, int w, int h)
+void MainWindow::CreatePic(QString filename, int x, int y, int w, int h)
 {
 
 }
@@ -86,14 +86,14 @@ void MainWindow::SetNoResize(QDialog &ob)
     ob.setMaximumSize(sizec);
 }
 
-MainWindow::SetVersion(int version_device, int ver, int subver)
+void MainWindow::SetVersion(int version_device, int ver, int subver)
 {
     CurlirVersion = version_device;
     version = ver;
     subversion = subver;
 
     Strversion.sprintf("LirSync, версия %d.%d.%03d", CurlirVersion, version, subversion);
-    return 0;
+    return;
 }
 
 void MainWindow::clickdecButton()

@@ -1,0 +1,12 @@
+
+*.tlog
+*.obj
+*.log
+*.exe
+*.ilk
+*.pdb
+*.exe
+*.exe
+*.cbt
+*.h
+*.res

@@ -39,15 +39,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    CreateMenu();
-    CreateButton(QString name,int x,int y,int w,int h);
-    CreateStaticText(QString name,int x,int y);
-    CreatePic(QString filename,int x,int y,int w,int h);
+    void CreateMenu();
+    void CreateButton(QString name,int x,int y,int w,int h);
+    void CreateStaticText(QString name,int x,int y);
+    void CreatePic(QString filename,int x,int y,int w,int h);
 
     void SetNoResize();
     void SetNoResize(QDialog &ob);
 
-    SetVersion(int version_device,int ver,int subver);
+    void SetVersion(int version_device,int ver,int subver);
     QString Strversion;
     int CurlirVersion;  // версия прибора
     int version;        // 0 -WinApi, 1 -QtApi , 2 - MFC
