@@ -149,9 +149,6 @@ void MainWindow::clickOkinAboutDlg()
 MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent),ui(new Ui::MainWindow)
 {
    // ui->setupUi(this);  // подключение формы
-
-
-
 }
 
 MainWindow::~MainWindow()
